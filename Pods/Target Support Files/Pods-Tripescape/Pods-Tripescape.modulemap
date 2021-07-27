@@ -1,0 +1,6 @@
+framework module Pods_Tripescape {
+  umbrella header "Pods-Tripescape-umbrella.h"
+
+  export *
+  module * { export * }
+}

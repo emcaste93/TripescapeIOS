@@ -1,0 +1,419 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		30BFAC55B9446606AC2448AA /* Pods_Tripescape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2EA128955F88BB3E53E76 /* Pods_Tripescape.framework */; };
+		5ADEAB3D26ADA0BB0016D842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */; };
+		5ADEAB3F26ADA0BB0016D842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB3E26ADA0BB0016D842 /* SceneDelegate.swift */; };
+		5ADEAB4126ADA0BB0016D842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4026ADA0BB0016D842 /* ViewController.swift */; };
+		5ADEAB4426ADA0BB0016D842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4226ADA0BB0016D842 /* Main.storyboard */; };
+		5ADEAB4626ADA0BF0016D842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4526ADA0BF0016D842 /* Assets.xcassets */; };
+		5ADEAB4926ADA0BF0016D842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4726ADA0BF0016D842 /* LaunchScreen.storyboard */; };
+		5ADEAB5226ADA5860016D842 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEAB5126ADA5860016D842 /* GoogleService-Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		5ADEAB3926ADA0BB0016D842 /* Tripescape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripescape.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		5ADEAB3E26ADA0BB0016D842 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		5ADEAB4026ADA0BB0016D842 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5ADEAB4326ADA0BB0016D842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5ADEAB4526ADA0BF0016D842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5ADEAB4826ADA0BF0016D842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5ADEAB4A26ADA0BF0016D842 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5ADEAB5126ADA5860016D842 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		5CA11773833836BB5F516D29 /* Pods-Tripescape.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tripescape.debug.xcconfig"; path = "Target Support Files/Pods-Tripescape/Pods-Tripescape.debug.xcconfig"; sourceTree = "<group>"; };
+		CEE2EA128955F88BB3E53E76 /* Pods_Tripescape.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Tripescape.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E7237CF633AD52610F7DF302 /* Pods-Tripescape.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Tripescape.release.xcconfig"; path = "Target Support Files/Pods-Tripescape/Pods-Tripescape.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5ADEAB3626ADA0BB0016D842 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				30BFAC55B9446606AC2448AA /* Pods_Tripescape.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5ADEAB3026ADA0BB0016D842 = {
+			isa = PBXGroup;
+			children = (
+				5ADEAB3B26ADA0BB0016D842 /* Tripescape */,
+				5ADEAB3A26ADA0BB0016D842 /* Products */,
+				CABF6064056754B98DDF77A6 /* Pods */,
+				E66479CB9E9178689EEEF50F /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		5ADEAB3A26ADA0BB0016D842 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5ADEAB3926ADA0BB0016D842 /* Tripescape.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5ADEAB3B26ADA0BB0016D842 /* Tripescape */ = {
+			isa = PBXGroup;
+			children = (
+				5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */,
+				5ADEAB3E26ADA0BB0016D842 /* SceneDelegate.swift */,
+				5ADEAB4026ADA0BB0016D842 /* ViewController.swift */,
+				5ADEAB4226ADA0BB0016D842 /* Main.storyboard */,
+				5ADEAB4526ADA0BF0016D842 /* Assets.xcassets */,
+				5ADEAB4726ADA0BF0016D842 /* LaunchScreen.storyboard */,
+				5ADEAB4A26ADA0BF0016D842 /* Info.plist */,
+				5ADEAB5126ADA5860016D842 /* GoogleService-Info.plist */,
+			);
+			path = Tripescape;
+			sourceTree = "<group>";
+		};
+		CABF6064056754B98DDF77A6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5CA11773833836BB5F516D29 /* Pods-Tripescape.debug.xcconfig */,
+				E7237CF633AD52610F7DF302 /* Pods-Tripescape.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		E66479CB9E9178689EEEF50F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CEE2EA128955F88BB3E53E76 /* Pods_Tripescape.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5ADEAB3826ADA0BB0016D842 /* Tripescape */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5ADEAB4D26ADA0BF0016D842 /* Build configuration list for PBXNativeTarget "Tripescape" */;
+			buildPhases = (
+				CE9A46C5AEEDD8A9322C7906 /* [CP] Check Pods Manifest.lock */,
+				5ADEAB3526ADA0BB0016D842 /* Sources */,
+				5ADEAB3626ADA0BB0016D842 /* Frameworks */,
+				5ADEAB3726ADA0BB0016D842 /* Resources */,
+				AC62042060927E97F53FE104 /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tripescape;
+			productName = Tripescape;
+			productReference = 5ADEAB3926ADA0BB0016D842 /* Tripescape.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5ADEAB3126ADA0BB0016D842 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1220;
+				LastUpgradeCheck = 1220;
+				TargetAttributes = {
+					5ADEAB3826ADA0BB0016D842 = {
+						CreatedOnToolsVersion = 12.2;
+					};
+				};
+			};
+			buildConfigurationList = 5ADEAB3426ADA0BB0016D842 /* Build configuration list for PBXProject "Tripescape" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5ADEAB3026ADA0BB0016D842;
+			productRefGroup = 5ADEAB3A26ADA0BB0016D842 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5ADEAB3826ADA0BB0016D842 /* Tripescape */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5ADEAB3726ADA0BB0016D842 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADEAB4926ADA0BF0016D842 /* LaunchScreen.storyboard in Resources */,
+				5ADEAB5226ADA5860016D842 /* GoogleService-Info.plist in Resources */,
+				5ADEAB4626ADA0BF0016D842 /* Assets.xcassets in Resources */,
+				5ADEAB4426ADA0BB0016D842 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		AC62042060927E97F53FE104 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tripescape/Pods-Tripescape-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Tripescape/Pods-Tripescape-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Tripescape/Pods-Tripescape-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CE9A46C5AEEDD8A9322C7906 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Tripescape-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5ADEAB3526ADA0BB0016D842 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5ADEAB4126ADA0BB0016D842 /* ViewController.swift in Sources */,
+				5ADEAB3D26ADA0BB0016D842 /* AppDelegate.swift in Sources */,
+				5ADEAB3F26ADA0BB0016D842 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		5ADEAB4226ADA0BB0016D842 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ADEAB4326ADA0BB0016D842 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5ADEAB4726ADA0BF0016D842 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5ADEAB4826ADA0BF0016D842 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5ADEAB4B26ADA0BF0016D842 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		5ADEAB4C26ADA0BF0016D842 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5ADEAB4E26ADA0BF0016D842 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5CA11773833836BB5F516D29 /* Pods-Tripescape.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tripescape/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.upv.inf.Tripescape;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5ADEAB4F26ADA0BF0016D842 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7237CF633AD52610F7DF302 /* Pods-Tripescape.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = Tripescape/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = es.upv.inf.Tripescape;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5ADEAB3426ADA0BB0016D842 /* Build configuration list for PBXProject "Tripescape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADEAB4B26ADA0BF0016D842 /* Debug */,
+				5ADEAB4C26ADA0BF0016D842 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5ADEAB4D26ADA0BF0016D842 /* Build configuration list for PBXNativeTarget "Tripescape" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5ADEAB4E26ADA0BF0016D842 /* Debug */,
+				5ADEAB4F26ADA0BF0016D842 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5ADEAB3126ADA0BB0016D842 /* Project object */;
+}
