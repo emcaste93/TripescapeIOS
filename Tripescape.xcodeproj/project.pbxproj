@@ -3,14 +3,23 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
 		30BFAC55B9446606AC2448AA /* Pods_Tripescape.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CEE2EA128955F88BB3E53E76 /* Pods_Tripescape.framework */; };
+		5A4C6D3B26C03BA200DF52A6 /* ViewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A4C6D3A26C03BA200DF52A6 /* ViewTripViewController.swift */; };
+		5A85742B26B0780400914F32 /* AuthenticationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A85742A26B0780400914F32 /* AuthenticationService.swift */; };
+		5A957A6C26BD912800F59335 /* TripService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A957A6B26BD912800F59335 /* TripService.swift */; };
+		5AA3896B26BAFCB80079D9D9 /* Trip.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA3896A26BAFCB80079D9D9 /* Trip.swift */; };
+		5AA3896E26BB00F80079D9D9 /* Enums.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA3896D26BB00F80079D9D9 /* Enums.swift */; };
+		5AA3897126BB0D0C0079D9D9 /* DatabaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AA3897026BB0D0C0079D9D9 /* DatabaseService.swift */; };
+		5AC4E3C426B7046A00FE3F1D /* CreateTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4E3C326B7046A00FE3F1D /* CreateTripViewController.swift */; };
+		5AC4E3CD26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4E3CC26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift */; };
+		5AD0BFBB26C178CD00E89CDD /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0BFBA26C178CD00E89CDD /* NewTripViewController.swift */; };
 		5ADEAB3D26ADA0BB0016D842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */; };
 		5ADEAB3F26ADA0BB0016D842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB3E26ADA0BB0016D842 /* SceneDelegate.swift */; };
-		5ADEAB4126ADA0BB0016D842 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4026ADA0BB0016D842 /* ViewController.swift */; };
+		5ADEAB4126ADA0BB0016D842 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4026ADA0BB0016D842 /* LoginViewController.swift */; };
 		5ADEAB4426ADA0BB0016D842 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4226ADA0BB0016D842 /* Main.storyboard */; };
 		5ADEAB4626ADA0BF0016D842 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4526ADA0BF0016D842 /* Assets.xcassets */; };
 		5ADEAB4926ADA0BF0016D842 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5ADEAB4726ADA0BF0016D842 /* LaunchScreen.storyboard */; };
@@ -18,10 +27,19 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5A4C6D3A26C03BA200DF52A6 /* ViewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewTripViewController.swift; sourceTree = "<group>"; };
+		5A85742A26B0780400914F32 /* AuthenticationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationService.swift; sourceTree = "<group>"; };
+		5A957A6B26BD912800F59335 /* TripService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripService.swift; sourceTree = "<group>"; };
+		5AA3896A26BAFCB80079D9D9 /* Trip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Trip.swift; sourceTree = "<group>"; };
+		5AA3896D26BB00F80079D9D9 /* Enums.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Enums.swift; sourceTree = "<group>"; };
+		5AA3897026BB0D0C0079D9D9 /* DatabaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DatabaseService.swift; sourceTree = "<group>"; };
+		5AC4E3C326B7046A00FE3F1D /* CreateTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripViewController.swift; sourceTree = "<group>"; };
+		5AC4E3CC26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5AD0BFBA26C178CD00E89CDD /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		5ADEAB3926ADA0BB0016D842 /* Tripescape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripescape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5ADEAB3E26ADA0BB0016D842 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		5ADEAB4026ADA0BB0016D842 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		5ADEAB4026ADA0BB0016D842 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		5ADEAB4326ADA0BB0016D842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		5ADEAB4526ADA0BF0016D842 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5ADEAB4826ADA0BF0016D842 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -44,6 +62,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5AC4E3C726B70AF700FE3F1D /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				5ADEAB3E26ADA0BB0016D842 /* SceneDelegate.swift */,
+				5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */,
+			);
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		5AC4E3C826B70B2300FE3F1D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				5ADEAB4226ADA0BB0016D842 /* Main.storyboard */,
+				5ADEAB4726ADA0BF0016D842 /* LaunchScreen.storyboard */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		5AC4E3C926B70B2900FE3F1D /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				5AC4E3C326B7046A00FE3F1D /* CreateTripViewController.swift */,
+				5ADEAB4026ADA0BB0016D842 /* LoginViewController.swift */,
+				5AC4E3CC26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift */,
+				5A4C6D3A26C03BA200DF52A6 /* ViewTripViewController.swift */,
+				5AD0BFBA26C178CD00E89CDD /* NewTripViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		5AC4E3CA26B70B4400FE3F1D /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5A85742A26B0780400914F32 /* AuthenticationService.swift */,
+				5AA3896A26BAFCB80079D9D9 /* Trip.swift */,
+				5AA3896D26BB00F80079D9D9 /* Enums.swift */,
+				5AA3897026BB0D0C0079D9D9 /* DatabaseService.swift */,
+				5A957A6B26BD912800F59335 /* TripService.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		5ADEAB3026ADA0BB0016D842 = {
 			isa = PBXGroup;
 			children = (
@@ -65,12 +125,11 @@
 		5ADEAB3B26ADA0BB0016D842 /* Tripescape */ = {
 			isa = PBXGroup;
 			children = (
-				5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */,
-				5ADEAB3E26ADA0BB0016D842 /* SceneDelegate.swift */,
-				5ADEAB4026ADA0BB0016D842 /* ViewController.swift */,
-				5ADEAB4226ADA0BB0016D842 /* Main.storyboard */,
+				5AC4E3CA26B70B4400FE3F1D /* Models */,
+				5AC4E3C926B70B2900FE3F1D /* Controllers */,
+				5AC4E3C826B70B2300FE3F1D /* Views */,
+				5AC4E3C726B70AF700FE3F1D /* Supporting Files */,
 				5ADEAB4526ADA0BF0016D842 /* Assets.xcassets */,
-				5ADEAB4726ADA0BF0016D842 /* LaunchScreen.storyboard */,
 				5ADEAB4A26ADA0BF0016D842 /* Info.plist */,
 				5ADEAB5126ADA5860016D842 /* GoogleService-Info.plist */,
 			);
@@ -83,7 +142,6 @@
 				5CA11773833836BB5F516D29 /* Pods-Tripescape.debug.xcconfig */,
 				E7237CF633AD52610F7DF302 /* Pods-Tripescape.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -210,9 +268,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5ADEAB4126ADA0BB0016D842 /* ViewController.swift in Sources */,
+				5AA3897126BB0D0C0079D9D9 /* DatabaseService.swift in Sources */,
+				5ADEAB4126ADA0BB0016D842 /* LoginViewController.swift in Sources */,
+				5AD0BFBB26C178CD00E89CDD /* NewTripViewController.swift in Sources */,
+				5AC4E3CD26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift in Sources */,
 				5ADEAB3D26ADA0BB0016D842 /* AppDelegate.swift in Sources */,
+				5A4C6D3B26C03BA200DF52A6 /* ViewTripViewController.swift in Sources */,
+				5A957A6C26BD912800F59335 /* TripService.swift in Sources */,
 				5ADEAB3F26ADA0BB0016D842 /* SceneDelegate.swift in Sources */,
+				5A85742B26B0780400914F32 /* AuthenticationService.swift in Sources */,
+				5AA3896B26BAFCB80079D9D9 /* Trip.swift in Sources */,
+				5AA3896E26BB00F80079D9D9 /* Enums.swift in Sources */,
+				5AC4E3C426B7046A00FE3F1D /* CreateTripViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -360,7 +427,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8NQ5UU5J2;
 				INFOPLIST_FILE = Tripescape/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -368,6 +437,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.upv.inf.Tripescape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -379,7 +449,9 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = P8NQ5UU5J2;
 				INFOPLIST_FILE = Tripescape/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -387,6 +459,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = es.upv.inf.Tripescape;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

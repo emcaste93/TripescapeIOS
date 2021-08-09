@@ -10,6 +10,7 @@ target 'Tripescape' do
   pod 'Firebase/Auth'
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
   pod 'PromiseKit'
   pod 'SDWebImage'
 end

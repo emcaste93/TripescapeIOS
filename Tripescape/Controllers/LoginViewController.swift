@@ -48,6 +48,7 @@ class LoginViewController: UIViewController {
                     print("LoginUser completed")
                     if error != nil {
                         self.displayAlert(title: "Login error", message: error!.localizedDescription)
+                        
                     } else {
                         self.isLoginSuccess = true
                         self.txtPass.text = ""
@@ -105,8 +106,19 @@ class LoginViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if(segue.identifier == "segueCreateTrip") {
-            var createTripController = segue.destination as! CreateTripViewController
-            createTripController.username = txtUser.text!
+          //  let createTripController = segue.destination as! CreateTripViewController
+            let nav = segue.destination as! UINavigationController
+            let createTripController = nav.topViewController as! CreateTripViewController
+            createTripController.currentUser = txtUser.text!
         }
-    }}
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        if identifier == "segueCreateTrip"  {
+            return true
+        }
+        return false
+    }
+    
+}
 
