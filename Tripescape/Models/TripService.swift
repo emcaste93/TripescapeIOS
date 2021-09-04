@@ -13,17 +13,17 @@ class TripService {
     func getImageFromLocation(location : Enums.Location) -> UIImage {
         switch location {
         case .Munich:
-            return UIImage(named: "camera")!
+            return UIImage(named: "berlin")! //TODO: change it for Munich
         case .Berlin:
-            return UIImage(named: "map")!
+            return UIImage(named: "berlin")!
         case .Black_Forest:
-            return UIImage(named: "map")!
+            return UIImage(named: "black_forest")!
         case .Cologne:
-            return UIImage(named: "map")!
+            return UIImage(named: "cologne")!
         case .Hamburg:
-            return UIImage(named: "camera")!
+            return UIImage(named: "hamburg")!
         case .Nuremberg:
-            return UIImage(named: "map")!
+            return UIImage(named: "nuremberg")!
     
         }
     }

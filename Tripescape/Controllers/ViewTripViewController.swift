@@ -9,11 +9,19 @@ import UIKit
 
 class ViewTripViewController: UIViewController {
 
+    @IBOutlet weak var lblDestination: UILabel!
+    @IBOutlet weak var lblDates: UILabel!
+    
+    var dest: String = ""
+    var dates: String = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupNavBar()
 
         // Do any additional setup after loading the view.
+        lblDestination.text = dest
+        lblDates.text = dates
     }
     
     func setupNavBar() {

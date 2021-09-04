@@ -92,6 +92,7 @@ class CreateTripViewController: UIViewController {
 }
 
 extension CreateTripViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
       /*  if(trips.count == 0) { return 3 } */
         return trips.count
@@ -104,6 +105,16 @@ extension CreateTripViewController: UICollectionViewDataSource, UICollectionView
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //
+        if(segue.identifier == "segueViewTrip") {
+            let viewTripController = segue.destination as! ViewTripViewController
+            viewTripController.dest = selectedTrip?.destination  != nil ? selectedTrip!.destination.description : "DESTINO"
+            let formatter = DateFormatter()
+            formatter.dateFormat = "d MMM yy"
+            let startDate = formatter.string(from: selectedTrip!.startDate)
+            let endDate = formatter.string(from: selectedTrip!.endDate)
+            
+            viewTripController.dates = startDate + " - " + endDate
+        }
     }
+    
 }
