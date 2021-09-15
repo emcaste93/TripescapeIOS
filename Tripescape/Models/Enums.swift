@@ -8,11 +8,24 @@
 import Foundation
 
 class Enums {
-    enum Season {
+    enum Season: CustomStringConvertible {
         case Summer
         case Winter
         case Spring
         case Autum
+        
+        var description: String {
+            switch self {
+            case .Autum:
+                return "Autumn"
+            case .Spring:
+                return "Spring"
+            case .Summer:
+                return "Summer"
+            case .Winter:
+                return "Winter"
+            }
+        }
     }
     
     enum Location: CustomStringConvertible {
@@ -32,7 +45,7 @@ class Enums {
             case .Berlin:
                 return "Berlin"
             case .Black_Forest:
-                return "Black Forest"
+                return "Black_Forest"
             case .Nuremberg:
                 return "Nuremberg"
             case .Cologne:
@@ -41,7 +54,7 @@ class Enums {
         }
     }
     
-    func getEnumFromString(location: String) -> Location {
+    func getLocationFromString(location: String) -> Location {
         switch  location {
         case "Munich":
             return .Munich
@@ -49,7 +62,7 @@ class Enums {
             return .Hamburg
         case "Berlin":
             return .Berlin
-        case "Black Forest":
+        case "Black_Forest":
             return .Black_Forest
         case "Nuremberg":
             return .Nuremberg
@@ -59,14 +72,65 @@ class Enums {
             return .Munich
         }
     }
-    enum Activity {
+    
+    func getAllActivities () -> [String] {
+        return [Activity.Canoeing.description, Activity.Hiking.description, Activity.Sailing.description,
+                Activity.Sightseeing.description, Activity.Wine_Tasting.description, Activity.Canoeing.description]
+    }
+    
+    enum Activity: CustomStringConvertible {
         case Hiking
         case Sightseeing
+        case Skiing
         case Canoeing
         case Sailing
         case Wine_Tasting
         case Jetski
         case Flying
+        
+        var description: String  {
+            switch self {
+            case .Hiking:
+                return "Hiking"
+            case .Sightseeing:
+                return "Sightseeing"
+            case .Skiing:
+                return "Skiing"
+            case .Canoeing:
+                return "Canoeing"
+            case .Sailing:
+                return "Sailing"
+            case .Wine_Tasting:
+                return "Wine_Tasting"
+            case .Jetski:
+                return "Jetski"
+            case .Flying:
+                return "Flying"
+            }
+        }
+    }
+    
+    func getActivityFromString(activity: String) -> Activity {
+        switch activity {
+        case "Hiking":
+            return .Hiking
+        case "Sightseeing":
+            return .Sightseeing
+        case "Skiing":
+            return .Skiing
+        case "Canoeing":
+            return .Canoeing
+        case "Sailing":
+            return .Sailing
+        case "Wine_Tasting":
+            return .Wine_Tasting
+        case "Jetski":
+            return .Jetski
+        case "Flying":
+            return .Flying
+        default:
+            return .Sightseeing
+        }
     }
     
     enum TripDay {

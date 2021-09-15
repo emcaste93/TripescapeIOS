@@ -424,52 +424,44 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="person" translatesAutoresizingMaskIntoConstraints="NO" id="WWc-Ui-ioM">
-                                <rect key="frame" x="40" y="264" width="50" height="50"/>
+                                <rect key="frame" x="40" y="250" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="253-Ny-iXp">
-                                <rect key="frame" x="122" y="161" width="138" height="50"/>
+                                <rect key="frame" x="122" y="150" width="125" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="startDateChanged:" destination="4k7-YF-vaj" eventType="valueChanged" id="kYv-Eh-aGi"/>
                                 </connections>
                             </datePicker>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="1" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rsp-sH-urX">
-                                <rect key="frame" x="246" y="264" width="50" height="50"/>
+                                <rect key="frame" x="246" y="250" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <slider opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="1" minValue="1" maxValue="10" translatesAutoresizingMaskIntoConstraints="NO" id="Y20-1n-GED">
-                                <rect key="frame" x="122" y="275" width="118" height="30"/>
+                                <rect key="frame" x="122" y="250" width="118" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <connections>
                                     <action selector="sliderNumPerChanged:" destination="4k7-YF-vaj" eventType="valueChanged" id="aOX-R6-TbB"/>
                                 </connections>
                             </slider>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="rqf-Sb-SKt">
-                                <rect key="frame" x="40" y="399" width="50" height="50"/>
+                                <rect key="frame" x="40" y="350" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <pickerView tag="1" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="0No-1Z-Hot">
-                                <rect key="frame" x="122" y="343" width="198" height="162"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="activity" translatesAutoresizingMaskIntoConstraints="NO" id="rRP-ia-bkH">
-                                <rect key="frame" x="40" y="563" width="50" height="50"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
-                            <pickerView multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="q2Y-Aq-xta">
-                                <rect key="frame" x="124" y="526" width="196" height="162"/>
+                                <rect key="frame" x="110" y="294" width="198" height="162"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
                             </pickerView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="calendar" translatesAutoresizingMaskIntoConstraints="NO" id="U1X-jc-6Tj">
-                                <rect key="frame" x="40" y="161" width="50" height="50"/>
+                                <rect key="frame" x="40" y="150" width="50" height="50"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Trip Data" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hiU-1r-4Hj">
-                                <rect key="frame" x="160" y="88" width="115" height="36"/>
+                                <rect key="frame" x="160" y="78" width="115" height="36"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="tintColor" systemColor="linkColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
@@ -477,9 +469,67 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <datePicker contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="date" translatesAutoresizingMaskIntoConstraints="NO" id="pyv-ee-1P3">
-                                <rect key="frame" x="268" y="161" width="142" height="50"/>
+                                <rect key="frame" x="268" y="150" width="142" height="50"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="endDateChanged:" destination="4k7-YF-vaj" eventType="valueChanged" id="tuw-Es-QU1"/>
+                                </connections>
                             </datePicker>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="PXT-55-owr">
+                                <rect key="frame" x="157" y="539" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="VoB-QG-KxS">
+                                <rect key="frame" x="305" y="539" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="U4L-Mb-jjP">
+                                <rect key="frame" x="305" y="597" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="pnc-7e-JZ3">
+                                <rect key="frame" x="157" y="597" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="boat" translatesAutoresizingMaskIntoConstraints="NO" id="hHW-RR-aqp">
+                                <rect key="frame" x="83" y="529" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="camera" translatesAutoresizingMaskIntoConstraints="NO" id="GbV-iD-BhH">
+                                <rect key="frame" x="83" y="643" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="kayak" translatesAutoresizingMaskIntoConstraints="NO" id="BUa-kI-PFf">
+                                <rect key="frame" x="83" y="587" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="HF3-BJ-Odb">
+                                <rect key="frame" x="305" y="653" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="skiing" translatesAutoresizingMaskIntoConstraints="NO" id="zYn-ax-iDf">
+                                <rect key="frame" x="247" y="529" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="wine" translatesAutoresizingMaskIntoConstraints="NO" id="GCC-Vj-n48">
+                                <rect key="frame" x="247" y="587" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="earth_fill" translatesAutoresizingMaskIntoConstraints="NO" id="PFT-3Q-4yV">
+                                <rect key="frame" x="247" y="643" width="50" height="50"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Desired Activities" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="L6h-rR-11I">
+                                <rect key="frame" x="151" y="477" width="132" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="mVw-Pi-PAv">
+                                <rect key="frame" x="156" y="653" width="49" height="31"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </switch>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="mon-Gv-6vR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -488,10 +538,15 @@
                     <connections>
                         <outlet property="endDatePicker" destination="pyv-ee-1P3" id="Ssl-Fq-mqw"/>
                         <outlet property="lblNumPersons" destination="rsp-sH-urX" id="pkT-Yv-QL2"/>
-                        <outlet property="pickerActivities" destination="q2Y-Aq-xta" id="FGS-jL-Htz"/>
                         <outlet property="pickerBudget" destination="0No-1Z-Hot" id="RPm-81-ZVI"/>
                         <outlet property="sliderNumPer" destination="Y20-1n-GED" id="yxA-E1-Pbm"/>
                         <outlet property="startDatePicker" destination="253-Ny-iXp" id="7zp-Ji-W6O"/>
+                        <outlet property="switchCanoeing" destination="pnc-7e-JZ3" id="STr-EI-kDq"/>
+                        <outlet property="switchHiking" destination="HF3-BJ-Odb" id="ZMD-ce-NEe"/>
+                        <outlet property="switchSailing" destination="PXT-55-owr" id="XQG-7d-S2r"/>
+                        <outlet property="switchSightseeing" destination="mVw-Pi-PAv" id="BIA-7W-vZj"/>
+                        <outlet property="switchSkiing" destination="VoB-QG-KxS" id="WLJ-wP-1Qu"/>
+                        <outlet property="switchWineTasking" destination="U4L-Mb-jjP" id="Kak-SM-lAP"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="6S4-BD-X1r" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -541,10 +596,13 @@
     </scenes>
     <resources>
         <image name="activity" width="64" height="64"/>
+        <image name="boat" width="64" height="64"/>
         <image name="book_fill" width="64" height="64"/>
         <image name="calendar" width="64" height="64"/>
+        <image name="camera" width="1065" height="957"/>
         <image name="earth" width="64" height="64"/>
         <image name="earth_fill" width="64" height="64"/>
+        <image name="kayak" width="64" height="64"/>
         <image name="lock" catalog="system" width="128" height="128"/>
         <image name="logo" width="111" height="105"/>
         <image name="map" width="64" height="64"/>
@@ -553,7 +611,9 @@
         <image name="person" width="64" height="64"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="qr_code" width="620" height="372"/>
+        <image name="skiing" width="64" height="64"/>
         <image name="tracking" width="64" height="64"/>
+        <image name="wine" width="64" height="64"/>
         <systemColor name="linkColor">
             <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>

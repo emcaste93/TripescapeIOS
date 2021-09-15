@@ -18,6 +18,32 @@ struct Trip {
     var destination: Enums.Location
     var startDate: Date
     var endDate: Date
+    var desiredActivities: [String] = [String]()
+    
+    init() {
+        numPersons = 0
+        budget = 0
+        lastBudget = 0
+        totalPrice = 0
+        id = ""
+        userid = ""
+        destination = .Munich
+        startDate = Date()
+        endDate = Date()
+    }
+    
+    init(startDate: Date, endDate: Date, desiredActivities: [String], budget: Int, numPersons: Int, userId: String) {
+        self.startDate = startDate
+        self.endDate = endDate
+        self.desiredActivities = desiredActivities
+        self.budget = budget
+        self.numPersons = numPersons
+        self.userid = userId
+        self.destination = .Munich
+        self.id = ""
+        self.lastBudget = 0
+        self.totalPrice = 0
+    }
     
     init?(dictionary: [String: Any]) {
         self.numPersons = (dictionary["numPersons"] as? Int)!
@@ -25,7 +51,7 @@ struct Trip {
         self.id = (dictionary["id"] as? String)!
         self.userid = (dictionary["userId"] as? String)!
         let stringDest: String =  (dictionary["destination"] as? String)!
-        self.destination = Enums().getEnumFromString(location: stringDest)
+        self.destination = Enums().getLocationFromString(location: stringDest)
         let startTime = (dictionary["startDate"] as! Timestamp)
         self.startDate = startTime.dateValue()
         let endTime = dictionary["endDate"] as! Timestamp

@@ -13,12 +13,18 @@ class TripDataViewController: UIViewController  {
     @IBOutlet weak var endDatePicker: UIDatePicker!
     @IBOutlet weak var sliderNumPer: UISlider!
     @IBOutlet weak var pickerBudget: UIPickerView!
-    @IBOutlet weak var pickerActivities: UIPickerView!
     var startDate: String?
     var endDate: String?
     var numPer: Int?
     var budgetData: [String] = [String]()
     var activityData: [String] = [String]()
+    @IBOutlet weak var switchCanoeing: UISwitch!
+    @IBOutlet weak var switchSailing: UISwitch!
+    @IBOutlet weak var switchSkiing: UISwitch!
+    @IBOutlet weak var switchWineTasking: UISwitch!
+    @IBOutlet weak var switchHiking: UISwitch!
+    @IBOutlet weak var switchSightseeing: UISwitch!
+    var desiredActivities: [String] = [String]()
     
     @IBOutlet weak var lblNumPersons: UILabel!
     override func viewDidLoad() {
@@ -28,16 +34,60 @@ class TripDataViewController: UIViewController  {
         let backButton = UIBarButtonItem()
         backButton.title = "Back"
         self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-        
+
         self.pickerBudget.delegate = self
         self.pickerBudget.dataSource = self
-        
-        self.pickerActivities.delegate = self
-        self.pickerActivities.dataSource = self
-        
+
         budgetData = ["<100", "100-200", "200-500", "500+"]
         activityData = ["Skiing", "Surfing", "Hiking", "Rowing"]
         
+        startDatePicker.minimumDate = Date()
+        endDatePicker.minimumDate = Date()
+        
+        switchSkiing.addTarget(self, action: #selector(self.switchClicked), for: .valueChanged)
+        switchCanoeing.addTarget(self, action: #selector(self.switchClicked), for: .valueChanged)
+        switchSailing.addTarget(self, action: #selector(self.switchClicked), for: .valueChanged)
+        switchSightseeing.addTarget(self, action: #selector(self.switchClicked), for: .valueChanged)
+        switchWineTasking.addTarget(self, action: #selector(self.switchClicked), for: .valueChanged)
+        switchHiking.addTarget(self, action: #selector(self.switchClicked), for: .valueChanged)
+        
+        switchHiking.isOn = false
+        switchSightseeing.isOn = false
+        switchCanoeing.isOn = false
+        switchSkiing.isOn = false
+        switchWineTasking.isOn = false
+        switchSailing.isOn = false
+        
+        TripService.sharedInstance.trip = Trip()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        print("TripDataVC viewilldisappear for desiredActivities \(desiredActivities.description)")
+        readSwitchesData()
+        TripService.sharedInstance.initTrip(startDate: startDatePicker.date, endDate: endDatePicker.date, desiredActivities: self.desiredActivities)
+    }
+    
+    @objc func switchClicked(mySwitch: UISwitch) {
+        readSwitchesData()
+    }
+    
+    func readSwitchesData() {
+        //Read UI stuff
+        var listSwitch = [switchSkiing : Enums.Activity.Skiing, switchHiking: Enums.Activity.Hiking, switchSailing: Enums.Activity.Sailing, switchCanoeing: Enums.Activity.Canoeing, switchSightseeing: Enums.Activity.Sightseeing, switchWineTasking: Enums.Activity.Wine_Tasting]
+        
+        for mySwitch in listSwitch {
+            if mySwitch.key!.isOn {
+                if !desiredActivities.contains(mySwitch.value.description) {
+                    desiredActivities.append(mySwitch.value.description)
+                }
+            } else {
+                if(desiredActivities.contains(mySwitch.value.description)) {
+                    let index = desiredActivities.firstIndex(of: mySwitch.value.description)!
+                    desiredActivities.remove(at: index)
+                }
+            }
+        }
+        TripService.sharedInstance.trip!.desiredActivities = desiredActivities
     }
     
     @IBAction func sliderNumPerChanged(_ sender: Any) {
@@ -47,11 +97,30 @@ class TripDataViewController: UIViewController  {
     
     
     @IBAction func startDateChanged(_ sender: Any) {
-        var dateFormatter = DateFormatter()
+        let dateFormatter = DateFormatter()
         dateFormatter.dateStyle = DateFormatter.Style.full
         startDate = dateFormatter.string(from: startDatePicker.date)
-        print("Selected start date: \(startDate)")
+        endDatePicker.minimumDate = startDatePicker.date
     }
+    
+    @IBAction func endDateChanged(_ sender: Any) {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateStyle = DateFormatter.Style.full
+        endDate = dateFormatter.string(from: endDatePicker.date)
+    }
+    
+    
+    func displayAlert(title: String, message: String) {
+        let alerta = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        alerta.addAction(UIAlertAction(title: "OK", style: .default, handler: { (accion) in
+            alerta.dismiss(animated: true, completion: nil)
+        }))
+        self.present(alerta, animated: true, completion: nil)
+    }
+    
+    
+    
+    
     
     /*
     // MARK: - Navigation

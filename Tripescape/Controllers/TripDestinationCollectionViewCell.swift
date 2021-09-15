@@ -13,11 +13,11 @@ class TripDestinationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblMatch: UILabel!
     @IBOutlet weak var lblDestination: UILabel!
     
-    func setupUI(destination: Enums.Location, match: Int) {
-        
+    func setupUI(destination: String, match: Int) {
+        print("setupUI for destination \(destination) and match \(match)")
         lblMatch.text = "\(match) %"
-        lblDestination.text = destination.description
-        imgDestination.image = UIImage(named: destination.description.lowercased())
+        lblDestination.text = destination
+        imgDestination.image = UIImage(named: destination.lowercased())
        /* lblTitle.text = trip.destination.description
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d MMM yy"
