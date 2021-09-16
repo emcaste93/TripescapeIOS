@@ -18,10 +18,13 @@ class TripDestinationCollectionViewCell: UICollectionViewCell {
         lblMatch.text = "\(match) %"
         lblDestination.text = destination
         imgDestination.image = UIImage(named: destination.lowercased())
-       /* lblTitle.text = trip.destination.description
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "d MMM yy"
-        lblData.text = dateFormatter.string(from: trip.startDate)
-        imgTrip.image = TripService().getImageFromLocation(location: trip.destination)*/
+        
+        if match > 50 {
+            lblMatch.backgroundColor = .systemGreen
+        } else if match > 30 {
+            lblMatch.backgroundColor = .systemYellow
+        } else {
+            lblMatch.backgroundColor = .systemRed
+        }
     }
 }

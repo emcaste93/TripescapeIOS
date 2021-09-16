@@ -76,7 +76,7 @@ class TripService {
     func getImageFromLocation(location : Enums.Location) -> UIImage {
         switch location {
         case .Munich:
-            return UIImage(named: "berlin")! //TODO: change it for Munich
+            return UIImage(named: "munich")!
         case .Berlin:
             return UIImage(named: "berlin")!
         case .Black_Forest:
@@ -89,43 +89,5 @@ class TripService {
             return UIImage(named: "nuremberg")!
     
         }
-    }
-
-    
-    func getDestinationMatch(destination: String) -> Int {
-     /*   print("getDestinationMatch (1)")
-        var matchedActivities: [String] = [String]()
-        let desiredActivities = self.getDesiredActivities()
-        var attractionsForDestination = [Attraction]()
-        DatabaseService.sharedInstance.retrieveAttractionsForDestination(destination: destination, seasons: getSeasonsFromDates(startDate: trip!.startDate, endDate: trip!.endDate)) { attractions in
-                attractionsForDestination = attractions!
-            print("Found \(attractions!.count) attractions for destination: \(destination), desiredActivities: \(desiredActivities)")
-        }*/
-       /* print("getDestinationMatch (2)")
-        if attractionsForDestination.count > 0 {
-            for activity in desiredActivities {
-                for attraction in attractionsForDestination {
-                    if attraction.activity.description == activity {
-                        print("Matched activity: \(activity)")
-                        if(!matchedActivities.contains(activity)) {
-                            print("Appending activity \(activity) to matched activities")
-                            matchedActivities.append(activity)
-                        }
-                       // continue
-                    }
-                }
-            }
-            if(matchedActivities.count == 0) {
-                print("No matched activites found for destination: \(destination)")
-                return 0
-            }
-            let match = trip!.desiredActivities.count / matchedActivities.count
-            print("Matched Activity count for destination: \(destination) gets matched activities = \(matchedActivities.count)")
-            return match * 100
-        } else {
-            print("attractionsForDestination == 0")
-            return 0
-        }*/
-        return 0
     }
 }

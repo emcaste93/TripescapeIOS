@@ -106,7 +106,6 @@ class LoginViewController: UIViewController {
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         if(segue.identifier == "segueCreateTrip") {
-          //  let createTripController = segue.destination as! CreateTripViewController
             let nav = segue.destination as! UINavigationController
             let createTripController = nav.topViewController as! CreateTripViewController
             createTripController.currentUser = txtUser.text!
