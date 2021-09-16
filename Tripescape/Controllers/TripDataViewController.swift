@@ -51,12 +51,12 @@ class TripDataViewController: UIViewController  {
         switchWineTasking.addTarget(self, action: #selector(self.switchClicked), for: .valueChanged)
         switchHiking.addTarget(self, action: #selector(self.switchClicked), for: .valueChanged)
         
-        switchHiking.isOn = false
-        switchSightseeing.isOn = false
-        switchCanoeing.isOn = false
-        switchSkiing.isOn = false
-        switchWineTasking.isOn = false
-        switchSailing.isOn = false
+        switchHiking.isOn = true
+        switchSightseeing.isOn = true
+        switchCanoeing.isOn = true
+        switchSkiing.isOn = true
+        switchWineTasking.isOn = true
+        switchSailing.isOn = true
         
         TripService.sharedInstance.trip = Trip()
     }

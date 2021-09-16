@@ -12,7 +12,7 @@ class TripDestinationViewController: UIViewController {
     @IBOutlet weak var collectionViewDestination: UICollectionView!
     var matchedAttractions: [Attraction] = [Attraction]()
     var destinationList: [String] = [String]()
-    var destinationMatch: [String: Int] = [String: Int]()
+    var matchedActivities: [String: [String]] = [String: [String]]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -55,10 +55,10 @@ class TripDestinationViewController: UIViewController {
                         }
                     }
                 }
-                var match = Double(matchedActivities.count) / Double(desiredActivities.count)
+                self.matchedActivities[destination] = matchedActivities
+             /*   var match = Double(matchedActivities.count) / Double(desiredActivities.count)
                 match = round(match * 100)
-            /*    print("Matched Activity count for destination: \(destination) gets matched activities = \(matchedActivities) and desired: \(desiredActivities.count), match = \(match)")*/
-                self.destinationMatch[destination] = Int(match)
+                self.destinationMatch[destination] = Int(match)*/
             }
             self.collectionViewDestination.reloadData()
         }
@@ -69,7 +69,7 @@ class TripDestinationViewController: UIViewController {
         for attraction in matchedAttractions {
             if !destinationList.contains(attraction.location.description) {
                 destinationList.append(attraction.location.description)
-                destinationMatch[attraction.location.description] = 0
+              //  destinationMatch[attraction.location.description] = 0
                 getDestinationMatch(destination: attraction.location.description)
             }
         }
@@ -109,8 +109,8 @@ extension TripDestinationViewController: UICollectionViewDataSource, UICollectio
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.cornerRadius = 3.0
         let dest = destinationList[indexPath.row]
-        print("DestinationList: \(destinationList) vs DestinationMatch: \(destinationMatch)")
-        cell.setupUI(destination: dest, match: destinationMatch[dest]!)
+     //   print("DestinationList: \(destinationList) vs DestinationMatch: \(destinationMatch)")
+        cell.setupUI(destination: dest, matchedActivities: self.matchedActivities[dest])
         return cell
     }
     
