@@ -20,7 +20,6 @@ class TripDestinationCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imgHiking: UIImageView!
         
     func setupUI(destination: String, matchedActivities: [String]?) {
-        print("setupUI starts for destination \(destination) and matchedActivities: \(matchedActivities)")
         hideAllActivities()
         
         lblDestination.text = destination

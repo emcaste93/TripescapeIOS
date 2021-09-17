@@ -54,6 +54,7 @@ class LoginViewController: UIViewController {
                         self.txtPass.text = ""
                         self.txtUser.text = ""
                         //Perform segue to main screen
+                        self.performSegue(withIdentifier: "segueCreateTrip", sender: nil)
                     }
                 }
             } else {
@@ -114,6 +115,7 @@ class LoginViewController: UIViewController {
     
     override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
         if identifier == "segueCreateTrip"  {
+            print("ShouldPerform segue succeded!")
             return true
         }
         return false

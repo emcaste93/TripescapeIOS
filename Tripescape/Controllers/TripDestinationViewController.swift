@@ -13,6 +13,7 @@ class TripDestinationViewController: UIViewController {
     var matchedAttractions: [Attraction] = [Attraction]()
     var destinationList: [String] = [String]()
     var matchedActivities: [String: [String]] = [String: [String]]()
+    var selectedRowIndex = 0
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -35,9 +36,18 @@ class TripDestinationViewController: UIViewController {
             if attractions != nil {
                 self.matchedAttractions = attractions!
                 self.getDestinationInfoFromAttractions()
+                
+                if(attractions!.count > 0) {
+                    self.setSelectedDestination(dest: attractions![0].location.description)
+                }
                 self.collectionViewDestination.reloadData()
             }
         }
+    }
+    
+    func setSelectedDestination(dest: String) {
+        TripService.sharedInstance.trip?.destination = Enums().getLocationFromString(location: dest)
+        //TODO -> Change background from cell
     }
     
     func getDestinationMatch (destination: String) {
@@ -69,7 +79,6 @@ class TripDestinationViewController: UIViewController {
         for attraction in matchedAttractions {
             if !destinationList.contains(attraction.location.description) {
                 destinationList.append(attraction.location.description)
-              //  destinationMatch[attraction.location.description] = 0
                 getDestinationMatch(destination: attraction.location.description)
             }
         }
@@ -81,8 +90,10 @@ class TripDestinationViewController: UIViewController {
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       /* self.selectedTrip = trips[indexPath.row]
-        self.performSegue(withIdentifier: "segueViewTrip", sender: nil)*/
+        setSelectedDestination(dest: destinationList[indexPath.row])
+        selectedRowIndex = indexPath.row
+        self.collectionViewDestination.reloadData()
+        //   self.performSegue(withIdentifier: "segueViewTrip", sender: nil)
     }
 
     /*
@@ -109,6 +120,12 @@ extension TripDestinationViewController: UICollectionViewDataSource, UICollectio
         cell.layer.borderColor = UIColor.black.cgColor
         cell.layer.cornerRadius = 3.0
         let dest = destinationList[indexPath.row]
+        if(indexPath.row == selectedRowIndex) {
+            cell.backgroundColor = .systemGray3
+
+        } else {
+            cell.backgroundColor = .none
+        }
      //   print("DestinationList: \(destinationList) vs DestinationMatch: \(destinationMatch)")
         cell.setupUI(destination: dest, matchedActivities: self.matchedActivities[dest])
         return cell

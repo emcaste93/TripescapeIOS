@@ -27,13 +27,14 @@ class DatabaseService {
     
     func retrieveTrips(for userid: String, onComplete: @escaping([Trip]?) -> Void) {
         // Get user trips, in the shape of an array
-        let myTrips = Firestore.firestore().collection("tripsGermany").whereField("userId", isEqualTo: userid).getDocuments() {
+        Firestore.firestore().collection("tripsGermany").whereField("userId", isEqualTo: userid).order(by: "startDate", descending: true).getDocuments() {
             (querySnapshot, err) in
             if let err = err {
                 print("Error getting myTrips documents for userid: \(userid), err: \(err)")
                 return
             } else {
                 var trips = [Trip]()
+                querySnapshot
                 for document in querySnapshot!.documents {
                     //print("\(document.documentID) => \(document.data())")
                     guard let dic = document.data() as? Dictionary<String, Any> else {
