@@ -92,6 +92,7 @@ class TripDestinationViewController: UIViewController {
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         setSelectedDestination(dest: destinationList[indexPath.row])
         selectedRowIndex = indexPath.row
+        TripService.sharedInstance.trip!.destination = Enums().getLocationFromString(location: destinationList[indexPath.row])
         self.collectionViewDestination.reloadData()
         //   self.performSegue(withIdentifier: "segueViewTrip", sender: nil)
     }

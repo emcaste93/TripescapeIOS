@@ -19,6 +19,7 @@ struct Trip {
     var startDate: Date
     var endDate: Date
     var desiredActivities: [String] = [String]()
+    var selectedAttrations = [Attraction]()
     
     init() {
         numPersons = 0
@@ -56,6 +57,6 @@ struct Trip {
         self.startDate = startTime.dateValue()
         let endTime = dictionary["endDate"] as! Timestamp
         self.endDate = endTime.dateValue()
-        //TODO: Add selectedAttractions [Attraction]
+        self.selectedAttrations = (dictionary["selectedAttractions"] as? [Attraction])!
     }
 }

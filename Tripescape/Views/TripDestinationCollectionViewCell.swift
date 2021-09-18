@@ -22,8 +22,8 @@ class TripDestinationCollectionViewCell: UICollectionViewCell {
     func setupUI(destination: String, matchedActivities: [String]?) {
         hideAllActivities()
         
-        lblDestination.text = destination
-        imgDestination.image = UIImage(named: destination.lowercased())
+        lblDestination.text = destination != Enums.Location.Black_Forest.description ? destination : "Black Forest"
+        imgDestination.image = TripService.sharedInstance.getImageFromLocation(location: Enums().getLocationFromString(location: destination))
     
         if matchedActivities == nil {
             return

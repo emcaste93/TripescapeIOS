@@ -28,8 +28,15 @@ class TripService {
         }
     }
     
+    func removeSelectedAttraction (attraction: Attraction) {
+    /*    attraction = trip!.selectedAttrations.firstIndex(where: { (tripAttraction) -> Bool in
+            return attraction.id = tripAttraction.id
+        })*/
+        //TODO: REmove Attraction
+    }
+    
     func getDesiredActivities () -> [String] {
-        print("getDesiredActivities() => Trip desired activities = \(trip!.desiredActivities)")
+     //   print("getDesiredActivities() => Trip desired activities = \(trip!.desiredActivities)")
         if trip!.desiredActivities.count == 0 {
             return  Enums().getAllActivities()
         }
@@ -87,7 +94,25 @@ class TripService {
             return UIImage(named: "hamburg")!
         case .Nuremberg:
             return UIImage(named: "nuremberg")!
-    
+        }
+    }
+        
+    func getImageFromActivity(activity : Enums.Activity) -> UIImage {
+        switch activity {
+        case .Canoeing:
+            return UIImage(named: "kayak")!
+        case .Skiing:
+            return UIImage(named: "skiing")!
+        case .Sailing:
+            return UIImage(named: "boat")!
+        case .Sightseeing:
+            return UIImage(named: "tour_guide")!
+        case .Wine_Tasting:
+            return UIImage(named: "wine")!
+        case .Hiking:
+            return UIImage(named: "hiking")!
+        default:
+            return UIImage(named: "tracking")!
         }
     }
 }
