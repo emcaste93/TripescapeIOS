@@ -148,7 +148,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Black Forest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-vW-t9Q">
-                                                    <rect key="frame" x="49" y="20" width="226" height="21"/>
+                                                    <rect key="frame" x="49" y="20" width="237" height="21"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="237" id="LOC-nG-0fs"/>
                                                         <constraint firstAttribute="width" constant="226" id="m0W-Bf-QNB"/>
@@ -167,7 +167,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="23 October 2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbh-cI-T57">
-                                                    <rect key="frame" x="105" y="130" width="104" height="22"/>
+                                                    <rect key="frame" x="105" y="130" width="223" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="223" id="dt0-sK-dIa"/>
                                                     </constraints>
@@ -606,21 +606,52 @@
             </objects>
             <point key="canvasLocation" x="4298.5507246376819" y="428.57142857142856"/>
         </scene>
-        <!--View Controller-->
+        <!--Trip Map View Controller-->
         <scene sceneID="iz0-WQ-eL3">
             <objects>
-                <viewController id="NQy-FL-T6z" sceneMemberID="viewController">
+                <viewController id="NQy-FL-T6z" customClass="TripMapViewController" customModule="Tripescape" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="9ln-yV-aye">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="CDt-1p-qQf">
+                                <rect key="frame" x="0.0" y="139" width="414" height="618"/>
+                            </mapView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Trip Plan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xxu-gq-zLY">
+                                <rect key="frame" x="152" y="79" width="110" height="36"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" systemColor="linkColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" image="plus.rectangle.fill.on.folder.fill" catalog="system" translatesAutoresizingMaskIntoConstraints="NO" id="Oar-ad-LWU">
+                                <rect key="frame" x="344" y="79" width="50" height="50"/>
+                            </imageView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="alE-xF-5SE"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="CDt-1p-qQf" firstAttribute="leading" secondItem="alE-xF-5SE" secondAttribute="leading" id="3c7-HK-wlX"/>
+                            <constraint firstItem="xxu-gq-zLY" firstAttribute="top" secondItem="alE-xF-5SE" secondAttribute="top" constant="23" id="3g4-fZ-wJJ"/>
+                            <constraint firstItem="CDt-1p-qQf" firstAttribute="trailing" secondItem="alE-xF-5SE" secondAttribute="trailing" id="MTq-dh-Xyg"/>
+                            <constraint firstItem="xxu-gq-zLY" firstAttribute="leading" secondItem="alE-xF-5SE" secondAttribute="leading" constant="152" id="Ph9-Y0-L9t"/>
+                            <constraint firstItem="CDt-1p-qQf" firstAttribute="top" secondItem="xxu-gq-zLY" secondAttribute="bottom" constant="24" id="T62-dZ-7rJ"/>
+                            <constraint firstAttribute="bottomMargin" secondItem="CDt-1p-qQf" secondAttribute="bottom" constant="-47" id="UGG-KP-gVt"/>
+                            <constraint firstItem="alE-xF-5SE" firstAttribute="trailing" secondItem="Oar-ad-LWU" secondAttribute="trailing" constant="21.5" id="W5i-lh-gJD"/>
+                            <constraint firstItem="Oar-ad-LWU" firstAttribute="leading" secondItem="xxu-gq-zLY" secondAttribute="trailing" constant="82" id="efK-wO-Ilm"/>
+                            <constraint firstItem="Oar-ad-LWU" firstAttribute="top" secondItem="alE-xF-5SE" secondAttribute="top" constant="23" id="hiF-6L-jab"/>
+                            <constraint firstItem="CDt-1p-qQf" firstAttribute="top" secondItem="Oar-ad-LWU" secondAttribute="bottom" constant="8.5" id="vW7-r2-mY2"/>
+                        </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="map" selectedImage="map_fill" id="Wux-cd-Wxj"/>
+                    <toolbarItems/>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
+                    <connections>
+                        <outlet property="map" destination="CDt-1p-qQf" id="UYA-Vo-nlM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hxX-Rk-cjF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5100" y="440"/>
+            <point key="canvasLocation" x="5098.5507246376819" y="439.95535714285711"/>
         </scene>
         <!--Trip Data View Controller-->
         <scene sceneID="Upe-ff-0B8">
@@ -861,6 +892,7 @@
         <image name="person" width="64" height="64"/>
         <image name="person.circle" catalog="system" width="128" height="121"/>
         <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
+        <image name="plus.rectangle.fill.on.folder.fill" catalog="system" width="128" height="96"/>
         <image name="qr_code" width="620" height="372"/>
         <image name="schedule" width="64" height="64"/>
         <image name="schedule_fill" width="64" height="64"/>

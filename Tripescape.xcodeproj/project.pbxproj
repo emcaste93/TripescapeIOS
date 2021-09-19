@@ -22,6 +22,7 @@
 		5ABAF9BF26E3EFFC00431F9E /* TripDestinationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABAF9BE26E3EFFC00431F9E /* TripDestinationCollectionViewCell.swift */; };
 		5AC4E3C426B7046A00FE3F1D /* CreateTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4E3C326B7046A00FE3F1D /* CreateTripViewController.swift */; };
 		5AC4E3CD26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4E3CC26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift */; };
+		5ACB1FE926F7B5780047FF8D /* TripMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB1FE826F7B5780047FF8D /* TripMapViewController.swift */; };
 		5AD0BFBB26C178CD00E89CDD /* NewTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AD0BFBA26C178CD00E89CDD /* NewTripViewController.swift */; };
 		5ADEAB3D26ADA0BB0016D842 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */; };
 		5ADEAB3F26ADA0BB0016D842 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ADEAB3E26ADA0BB0016D842 /* SceneDelegate.swift */; };
@@ -47,6 +48,7 @@
 		5ABAF9BE26E3EFFC00431F9E /* TripDestinationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDestinationCollectionViewCell.swift; sourceTree = "<group>"; };
 		5AC4E3C326B7046A00FE3F1D /* CreateTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripViewController.swift; sourceTree = "<group>"; };
 		5AC4E3CC26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsCollectionViewCell.swift; sourceTree = "<group>"; };
+		5ACB1FE826F7B5780047FF8D /* TripMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapViewController.swift; sourceTree = "<group>"; };
 		5AD0BFBA26C178CD00E89CDD /* NewTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewTripViewController.swift; sourceTree = "<group>"; };
 		5ADEAB3926ADA0BB0016D842 /* Tripescape.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tripescape.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5ADEAB3C26ADA0BB0016D842 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				5AACAB0626E00313008F0C8C /* TripDataViewController.swift */,
 				5AACAB0926E00978008F0C8C /* TripDestinationViewController.swift */,
 				5A18B2BB26F5223F00149221 /* TripActivityManagementViewController.swift */,
+				5ACB1FE826F7B5780047FF8D /* TripMapViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -304,6 +307,7 @@
 				5AACAB0726E00313008F0C8C /* TripDataViewController.swift in Sources */,
 				5AC4E3C426B7046A00FE3F1D /* CreateTripViewController.swift in Sources */,
 				5A18B2BF26F5233200149221 /* TripActivitiesTableViewCell.swift in Sources */,
+				5ACB1FE926F7B5780047FF8D /* TripMapViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
