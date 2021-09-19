@@ -74,15 +74,11 @@ class LoginViewController: UIViewController {
             if let strPassword = txtPass.text, !strPassword.isEmpty {
                 AuthenticationService.sharedInstance.registerUser(email: strUser, password: strPassword) { (error: Error?) in
                     //Login completed - check if error
-                    print("LoginUser completed")
                     if error != nil {
                         self.displayAlert(title: "Login error", message: error!.localizedDescription)
                     } else {
-                        self.isLoginSuccess = true
-                        self.txtPass.text = ""
-                        self.txtUser.text = ""
-                        //Perform segue to main screen
-                        self.performSegue(withIdentifier: "segueCreateTrip", sender: nil)
+                        print("Signup completed")
+                        self.displayAlert(title: "Sing up completed!", message: "Sign up completed, log in to continue")
                     }
                 }
             } else {
@@ -92,7 +88,6 @@ class LoginViewController: UIViewController {
             displayAlert(title: "Login error", message: "Invalid user")
         }
         btnLogin.isEnabled = true
-        displayAlert(title: "Sing up completed!", message: "Sign up completed, log in to continue")
     }
     
     func displayAlert(title: String, message: String) {

@@ -50,7 +50,6 @@ class DatabaseService {
     }
     
     func retrieveAttractions(desiredActivities: [String], seasons: [String], onComplete: @escaping([Attraction]?) -> Void) {
-        //print("retrieveAttractions for desiredActivities: \(desiredActivities.count), seasons: \(seasons.count)")
         if(desiredActivities.count == 0) {
             return
         }
@@ -63,7 +62,6 @@ class DatabaseService {
             } else {
                 var attractions = [Attraction]()
                 for document in querySnapshot!.documents {
-                    //print("\(document.documentID) => \(document.data())")
                     guard let dic = document.data() as? Dictionary<String, Any> else {
                        print("Retrieve attractions - No document found/cast")
                         return
@@ -71,15 +69,12 @@ class DatabaseService {
                     let attraction = Attraction(dictionary: dic)!
                    // print("Attraction with season count: \(attraction.seasonsAvailable?.count) vs desired seasons: \(seasons.count)")
                     for season in attraction.seasonsAvailable! {
-                        //print("Attraction season: \(season.description) vs desired seasons [0] \(seasons[0].description)")
                         if(seasons.contains(season)) {
                             attractions.append(attraction)
                             break
                         }
                     }
-                   // attractions.append(Attraction(dictionary: dic)!)
                 }
-               // print("retrieveAttractions onComplete, attractions count: \(attractions.count)")
                 onComplete(attractions)
             }
       }
@@ -113,9 +108,7 @@ class DatabaseService {
                             break
                         }
                     }
-                   // attractions.append(Attraction(dictionary: dic)!)
                 }
-               // print("retrieveAttractions onComplete, attractions count: \(attractions.count)")
                 onComplete(attractions)
             }
       }

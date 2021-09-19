@@ -19,6 +19,7 @@ class Attraction {
     var tripDays: Array<Enums.TripDay>?
     var title: String
     var coordinates: String? //TODO GeoPoint
+    var id: String
     
     init?(dictionary: [String: Any] ) {
         self.title = (dictionary["title"] as? String)!
@@ -32,6 +33,7 @@ class Attraction {
         self.startTime = (dictionary["startTime"] as? String)!
         self.seasonsAvailable = (dictionary["seasonsAvailable"] as? [String])!
         self.link = (dictionary["link"] as? String)!
+        self.id = (dictionary["id"] as? String)!
        // let tripDaysString: Array<String> = (dictionary["tripDays"] as? Array<String>)!
         //TODO convert Array<String> to Array<Enums.TripDay>
         //TODO: deal with coordinates

@@ -7,13 +7,15 @@
 
 import UIKit
 
-class TripActivityManagementViewController: UIViewController {
+class TripActivityManagementViewController: UIViewController, CustomCellUpdater {
+    
     @IBOutlet weak var tblView: UITableView!
     @IBOutlet weak var lblSelectedActivities: UILabel!
     @IBOutlet weak var lblTotalPrice: UILabel!
     
     var attractionList = [Attraction]()
     var selectedAttractions = [Attraction]()
+    var destination: Enums.Location?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,14 +29,20 @@ class TripActivityManagementViewController: UIViewController {
     }
     
     func getAttractionList () {
-        let tripDest = TripService.sharedInstance.trip!.destination
-        var tripDestDesc = tripDest.description != Enums.Location.Black_Forest.description ? tripDest.description : "Black Forest"
+        if(destination != nil &&  destination == TripService.sharedInstance.trip!.destination) {
+            //If destination didnt change, then dont reload data
+            return
+        }
+        
+        destination = TripService.sharedInstance.trip!.destination
+        let tripDestDesc = self.destination!.description != Enums.Location.Black_Forest.description ? destination!.description : "Black Forest"
         lblSelectedActivities.text = "Select activities in \(tripDestDesc)"
         let tripSeasons = TripService.sharedInstance.getTripSeasons()
-        DatabaseService.sharedInstance.retrieveAttractionsForDestination(destination: tripDest.description, seasons: tripSeasons) { attractions in
+        DatabaseService.sharedInstance.retrieveAttractionsForDestination(destination: self.destination!.description, seasons: tripSeasons) { attractions in
             if attractions != nil {
                 self.attractionList = attractions!
                 self.selectedAttractions = attractions! //TODO: Just select default as budget
+                TripService.sharedInstance.trip!.selectedAttrations = self.selectedAttractions
                 self.updateTotalPrice()
                 self.tblView.reloadData()
             }
@@ -47,6 +55,14 @@ class TripActivityManagementViewController: UIViewController {
             price += attraction.price
         }
         lblTotalPrice.text = String(price) + "€"
+    }
+    
+    //Using delegate
+    func removeAttractionFromSelected(attraction: Attraction) {
+        print("[TripActivityManagement updateTableView starts")
+        TripService.sharedInstance.removeSelectedAttraction(attraction: attraction)
+        selectedAttractions = TripService.sharedInstance.trip!.selectedAttrations
+        self.tblView.reloadData()
     }
     
 
@@ -70,6 +86,7 @@ extension TripActivityManagementViewController : UITableViewDelegate, UITableVie
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "activitiesCell") as! TripActivitiesTableViewCell
         cell.setupUI(attraction: selectedAttractions[indexPath.row])
+        cell.delegate = self
         return cell
     }
     

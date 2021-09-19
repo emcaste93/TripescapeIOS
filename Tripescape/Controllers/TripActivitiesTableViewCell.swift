@@ -9,6 +9,8 @@ import UIKit
 
 class TripActivitiesTableViewCell: UITableViewCell {
 
+    var attraction: Attraction?
+    weak var delegate: CustomCellUpdater?
     @IBOutlet weak var imgActivity: UIImageView!
     @IBOutlet weak var lblActivity: UILabel!
     @IBOutlet weak var lblAttraction: UILabel!
@@ -31,10 +33,15 @@ class TripActivitiesTableViewCell: UITableViewCell {
         lblAttraction.text = attraction.title
         lblAttractionPrice.text = String(attraction.price) + "€"
         imgActivity.image = TripService.sharedInstance.getImageFromActivity(activity: attraction.activity)
+        self.attraction = attraction
     }
 
     @IBAction func deleteItemClicked(_ sender: Any) {
-      //  TripService.sharedInstance.removeSelectedAttraction(attraction: nil)
-        //TODO: how to know which to delete?
+        print("Clicked attracion wtih title: \(attraction!.title)")
+        delegate?.removeAttractionFromSelected(attraction: attraction!)
     }
+}
+
+protocol CustomCellUpdater: class {
+    func removeAttractionFromSelected(attraction: Attraction)
 }

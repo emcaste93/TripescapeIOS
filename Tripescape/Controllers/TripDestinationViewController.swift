@@ -30,24 +30,25 @@ class TripDestinationViewController: UIViewController {
     }
     
     func getAttractions() {
-        let desiredActivities = TripService.sharedInstance.getDesiredActivities()
-        let seasons = TripService.sharedInstance.getTripSeasons()
-        DatabaseService.sharedInstance.retrieveAttractions(desiredActivities: desiredActivities, seasons: seasons) { attractions in
-            if attractions != nil {
-                self.matchedAttractions = attractions!
-                self.getDestinationInfoFromAttractions()
-                
-                if(attractions!.count > 0) {
-                    self.setSelectedDestination(dest: attractions![0].location.description)
+        if(selectedRowIndex == 0) {
+            let desiredActivities = TripService.sharedInstance.getDesiredActivities()
+            let seasons = TripService.sharedInstance.getTripSeasons()
+            DatabaseService.sharedInstance.retrieveAttractions(desiredActivities: desiredActivities, seasons: seasons) { attractions in
+                if attractions != nil {
+                    self.matchedAttractions = attractions!
+                    self.getDestinationInfoFromAttractions()
+                    
+                    if(attractions!.count > 0) {
+                        self.setSelectedDestination(dest: attractions![0].location.description)
+                    }
+                    self.collectionViewDestination.reloadData()
                 }
-                self.collectionViewDestination.reloadData()
             }
         }
     }
     
     func setSelectedDestination(dest: String) {
         TripService.sharedInstance.trip?.destination = Enums().getLocationFromString(location: dest)
-        //TODO -> Change background from cell
     }
     
     func getDestinationMatch (destination: String) {
@@ -66,9 +67,6 @@ class TripDestinationViewController: UIViewController {
                     }
                 }
                 self.matchedActivities[destination] = matchedActivities
-             /*   var match = Double(matchedActivities.count) / Double(desiredActivities.count)
-                match = round(match * 100)
-                self.destinationMatch[destination] = Int(match)*/
             }
             self.collectionViewDestination.reloadData()
         }
@@ -94,7 +92,6 @@ class TripDestinationViewController: UIViewController {
         selectedRowIndex = indexPath.row
         TripService.sharedInstance.trip!.destination = Enums().getLocationFromString(location: destinationList[indexPath.row])
         self.collectionViewDestination.reloadData()
-        //   self.performSegue(withIdentifier: "segueViewTrip", sender: nil)
     }
 
     /*
@@ -127,20 +124,11 @@ extension TripDestinationViewController: UICollectionViewDataSource, UICollectio
         } else {
             cell.backgroundColor = .none
         }
-     //   print("DestinationList: \(destinationList) vs DestinationMatch: \(destinationMatch)")
         cell.setupUI(destination: dest, matchedActivities: self.matchedActivities[dest])
         return cell
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if(segue.identifier == "segueViewTrip") {
-         /*   let viewTripController = segue.destination as! ViewTripViewController
-            viewTripController.dest = selectedTrip?.destination  != nil ? selectedTrip!.destination.description : "DESTINO"
-            let formatter = DateFormatter()
-            formatter.dateFormat = "d MMM yy"
-            let startDate = formatter.string(from: selectedTrip!.startDate)
-            let endDate = formatter.string(from: selectedTrip!.endDate)
-            
-            viewTripController.dates = startDate + " - " + endDate*/
         }
     }}
