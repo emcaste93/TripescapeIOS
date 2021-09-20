@@ -11,22 +11,23 @@ import Firebase
 struct Trip {
     var numPersons: Int = 0
     var budget: Int = 0
-    var lastBudget: Int = 0
     var totalPrice: Int = 0
-    var id: String
+    var id: String = NSUUID().uuidString
     var userid: String
     var destination: Enums.Location
     var startDate: Date
     var endDate: Date
     var desiredActivities: [String] = [String]()
     var selectedAttrations = [Attraction]()
+    var dictionary: [String: Any] {
+        return  ["numPersons": numPersons, "budget": budget, "totalPrice": totalPrice, "selectedAttractions": selectedAttrations,
+                 "startDate": startDate, "endDate": endDate, "userId": userid, "id": id]
+    }
     
     init() {
         numPersons = 0
         budget = 0
-        lastBudget = 0
         totalPrice = 0
-        id = ""
         userid = ""
         destination = .Munich
         startDate = Date()
@@ -42,7 +43,6 @@ struct Trip {
         self.userid = userId
         self.destination = .Munich
         self.id = ""
-        self.lastBudget = 0
         self.totalPrice = 0
     }
     

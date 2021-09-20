@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 class Attraction {
     var activity: Enums.Activity
@@ -18,7 +19,7 @@ class Attraction {
     var link: String
     var tripDays: Array<Enums.TripDay>?
     var title: String
-    var coordinates: String? //TODO GeoPoint
+    var coordinates: GeoPoint
     var id: String
     
     init?(dictionary: [String: Any] ) {
@@ -34,6 +35,7 @@ class Attraction {
         self.seasonsAvailable = (dictionary["seasonsAvailable"] as? [String])!
         self.link = (dictionary["link"] as? String)!
         self.id = (dictionary["id"] as? String)!
+        self.coordinates = (dictionary["coordinates"] as? GeoPoint)!
        // let tripDaysString: Array<String> = (dictionary["tripDays"] as? Array<String>)!
         //TODO convert Array<String> to Array<Enums.TripDay>
         //TODO: deal with coordinates

@@ -28,6 +28,9 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater 
         getAttractionList()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        TripService.sharedInstance.trip!.selectedAttrations = selectedAttractions
+    }
     func getAttractionList () {
         if(destination != nil &&  destination == TripService.sharedInstance.trip!.destination) {
             //If destination didnt change, then dont reload data

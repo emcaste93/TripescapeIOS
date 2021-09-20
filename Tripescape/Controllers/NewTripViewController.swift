@@ -13,21 +13,6 @@ class NewTripViewController: UITabBarController {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
-       // self.tabBarItem.selectedImage = UIImage(named: "book")
-   //     let tabBarAppearence = UITabBar.appearance()
-      //  tabBarAppearence.tintColor = nil //UIColor.black
-      //  tabBar.inActiveTintColor()
-      //  self.tabBar.unselectedItemTintColor = UIColor.gray
-      /*  if let tabBarItem1 = self.tabBar.items?[0] {
-            tabBarItem1.selectedImage = UIImage(named: "book_fill")
-            tabBarItem1.image = UIImage(named: "earth")
-        }
-        
-        if let tabBarItem2 = self.tabBar.items?[1] {
-            tabBarItem2.selectedImage = UIImage(named: "earth_fill")
-            tabBarItem2.image = UIImage(named: "earth")
-        }*/
-        
         tabBar.inActiveTintColor()
         
     }

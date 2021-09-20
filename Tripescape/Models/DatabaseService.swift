@@ -49,6 +49,19 @@ class DatabaseService {
       }
     }
     
+    func saveTrip(for trip: Trip, onComplete: @escaping(Trip?) -> Void) {
+       print("[DatabaseService] Saving trip with data: \(trip.dictionary)")
+        print("[DatabaseService] (2) Trip userid =  \(trip.userid), numPersons = \(trip.numPersons)")
+     /*   Firestore.firestore().collection("tripsGermany").addDocument(data: trip.dictionary) { error in
+            if(error != nil) {
+                print("Error while saving trip! \(String(describing: error))")
+                return
+            } else {
+                onComplete(trip)
+            }
+        }*/
+    }
+    
     func retrieveAttractions(desiredActivities: [String], seasons: [String], onComplete: @escaping([Attraction]?) -> Void) {
         if(desiredActivities.count == 0) {
             return
