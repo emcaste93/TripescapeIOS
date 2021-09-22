@@ -11,6 +11,7 @@ target 'Tripescape' do
   pod 'Firebase/Database'
   pod 'Firebase/Storage'
   pod 'Firebase/Firestore'
+  pod 'FirebaseFirestoreSwift'
   pod 'PromiseKit'
   pod 'SDWebImage'
 end

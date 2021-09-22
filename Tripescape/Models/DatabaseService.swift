@@ -6,10 +6,12 @@
 //
 
 import Foundation
+import Firebase
 import FirebaseDatabase
 import FirebaseStorage
 import FirebaseAuth
 import FirebaseFirestore
+import FirebaseFirestoreSwift
 import PromiseKit
 
 class DatabaseService {
@@ -41,12 +43,22 @@ class DatabaseService {
                        print("Retrieve trips - No document found/cast")
                         return
                     }
+                    //print("Appending doc with id: \(document.documentID)")
                     trips.append(Trip(dictionary: dic)!)
                 }
                 print("RetrieveTrips onComplete, trips count: \(trips.count)")
                 onComplete(trips)
             }
       }
+    }
+    
+    func saveTrip(for trip: Trip, onComplete: @escaping(Trip?) -> Void) {
+       // print("[DatabaseService] (2) Trip userid =  \(trip.userId), numPersons = \(trip.numPersons)")
+        do {
+            try Firestore.firestore().collection("tripsGermany").document(trip.id).setData(from: trip)
+        } catch let error {
+            print("Error writing trip to Firestore: \(error)")
+        }
     }
     
     func retrieveAttractions(desiredActivities: [String], seasons: [String], onComplete: @escaping([Attraction]?) -> Void) {
@@ -112,4 +124,6 @@ class DatabaseService {
                 onComplete(attractions)
             }
       }
-    }}
+    }
+
+}

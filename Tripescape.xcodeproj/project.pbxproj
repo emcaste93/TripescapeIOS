@@ -20,6 +20,7 @@
 		5AACAB0726E00313008F0C8C /* TripDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AACAB0626E00313008F0C8C /* TripDataViewController.swift */; };
 		5AACAB0A26E00978008F0C8C /* TripDestinationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AACAB0926E00978008F0C8C /* TripDestinationViewController.swift */; };
 		5ABAF9BF26E3EFFC00431F9E /* TripDestinationCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ABAF9BE26E3EFFC00431F9E /* TripDestinationCollectionViewCell.swift */; };
+		5AC4DC5426F8E28D003B3D00 /* TripAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4DC5326F8E28D003B3D00 /* TripAnnotation.swift */; };
 		5AC4E3C426B7046A00FE3F1D /* CreateTripViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4E3C326B7046A00FE3F1D /* CreateTripViewController.swift */; };
 		5AC4E3CD26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5AC4E3CC26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift */; };
 		5ACB1FE926F7B5780047FF8D /* TripMapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5ACB1FE826F7B5780047FF8D /* TripMapViewController.swift */; };
@@ -46,6 +47,7 @@
 		5AACAB0626E00313008F0C8C /* TripDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDataViewController.swift; sourceTree = "<group>"; };
 		5AACAB0926E00978008F0C8C /* TripDestinationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDestinationViewController.swift; sourceTree = "<group>"; };
 		5ABAF9BE26E3EFFC00431F9E /* TripDestinationCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripDestinationCollectionViewCell.swift; sourceTree = "<group>"; };
+		5AC4DC5326F8E28D003B3D00 /* TripAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripAnnotation.swift; sourceTree = "<group>"; };
 		5AC4E3C326B7046A00FE3F1D /* CreateTripViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateTripViewController.swift; sourceTree = "<group>"; };
 		5AC4E3CC26B70FA500FE3F1D /* MyTripsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyTripsCollectionViewCell.swift; sourceTree = "<group>"; };
 		5ACB1FE826F7B5780047FF8D /* TripMapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TripMapViewController.swift; sourceTree = "<group>"; };
@@ -121,6 +123,7 @@
 				5AA3897026BB0D0C0079D9D9 /* DatabaseService.swift */,
 				5A957A6B26BD912800F59335 /* TripService.swift */,
 				5AA3E3AA26E53A22000C2E57 /* Attraction.swift */,
+				5AC4DC5326F8E28D003B3D00 /* TripAnnotation.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -302,6 +305,7 @@
 				5A85742B26B0780400914F32 /* AuthenticationService.swift in Sources */,
 				5ABAF9BF26E3EFFC00431F9E /* TripDestinationCollectionViewCell.swift in Sources */,
 				5AA3896B26BAFCB80079D9D9 /* Trip.swift in Sources */,
+				5AC4DC5426F8E28D003B3D00 /* TripAnnotation.swift in Sources */,
 				5AA3896E26BB00F80079D9D9 /* Enums.swift in Sources */,
 				5A18B2BC26F5223F00149221 /* TripActivityManagementViewController.swift in Sources */,
 				5AACAB0726E00313008F0C8C /* TripDataViewController.swift in Sources */,

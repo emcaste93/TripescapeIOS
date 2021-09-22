@@ -41,17 +41,7 @@ class CreateTripViewController: UIViewController {
         dismiss(animated:true, completion: nil)
     }
     
-  /*  override func willMove(toParent parent: UIViewController?) {
-        super.willMove(toParent: parent)
-        if parent == nil {
-            print("Back button pressed - Returning to LoginView")
-            AuthenticationService.sharedInstance.logout()
-        }
-        
-    }*/
-    
     func refreshMyTrips() {
-        print("refreshMyTrips starts ...")
         if(self.currentUser == nil) {
             self.currentUser = DatabaseService.sharedInstance.getCurrentUserId()
         }
@@ -74,11 +64,6 @@ class CreateTripViewController: UIViewController {
         self.performSegue(withIdentifier: "segueViewTrip", sender: nil)
     }
     
-    /*func setupNavBar() {
-        let backButton = UIBarButtonItem()
-        backButton.title = "Log out"
-        self.navigationController?.navigationBar.topItem?.backBarButtonItem = backButton
-    }*/
     /*
     // MARK: - Navigation
 

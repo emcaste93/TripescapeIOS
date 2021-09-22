@@ -28,16 +28,12 @@ class Enums {
         }
     }
     
-    enum Location: CustomStringConvertible {
-        case Munich
-        case Hamburg
-        case Black_Forest
-        case Berlin
-        case Nuremberg
-        case Cologne
+    enum Location: String,CustomStringConvertible, Codable {
+        
+        case Munich, Hamburg, Black_Forest, Berlin, Nuremberg, Cologne
         
         var description: String {
-            switch self {
+            switch (self ) {
             case .Munich:
                 return "Munich"
             case .Hamburg:
@@ -51,6 +47,15 @@ class Enums {
             case .Cologne:
                 return "Cologne"
             }
+        }
+        
+        private enum CodingKeys {
+            case Munich
+            case Hamburg
+            case Black_Forest
+            case Berlin
+            case Nuremberg
+            case Cologne
         }
     }
     
@@ -78,7 +83,7 @@ class Enums {
                 Activity.Sightseeing.description, Activity.Wine_Tasting.description, Activity.Canoeing.description]
     }
     
-    enum Activity: CustomStringConvertible {
+    enum Activity: String,CustomStringConvertible, Codable {
         case Hiking
         case Sightseeing
         case Skiing
@@ -107,6 +112,17 @@ class Enums {
             case .Flying:
                 return "Flying"
             }
+        }
+        
+        private enum CodingKeys {
+            case Hiking
+            case Sightseeing
+            case Skiing
+            case Canoeing
+            case Sailing
+            case Wine_Tasting
+            case Jetski
+            case Flying
         }
     }
     

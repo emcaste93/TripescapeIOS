@@ -15,7 +15,7 @@ class TripDataViewController: UIViewController  {
     @IBOutlet weak var pickerBudget: UIPickerView!
     var startDate: String?
     var endDate: String?
-    var numPer: Int?
+    var numPer: Int = 1
     var budgetData: [String] = [String]()
     var activityData: [String] = [String]()
     @IBOutlet weak var switchCanoeing: UISwitch!
@@ -62,9 +62,8 @@ class TripDataViewController: UIViewController  {
     }
     
     override func viewWillDisappear(_ animated: Bool) {
-        print("TripDataVC viewilldisappear for desiredActivities \(desiredActivities.description)")
         readSwitchesData()
-        TripService.sharedInstance.initTrip(startDate: startDatePicker.date, endDate: endDatePicker.date, desiredActivities: self.desiredActivities)
+        TripService.sharedInstance.initTrip(startDate: startDatePicker.date, endDate: endDatePicker.date, desiredActivities: self.desiredActivities, numPersons: numPer, budget: 1, userid: DatabaseService.sharedInstance.getCurrentUserId())
     }
     
     @objc func switchClicked(mySwitch: UISwitch) {
@@ -73,7 +72,7 @@ class TripDataViewController: UIViewController  {
     
     func readSwitchesData() {
         //Read UI stuff
-        var listSwitch = [switchSkiing : Enums.Activity.Skiing, switchHiking: Enums.Activity.Hiking, switchSailing: Enums.Activity.Sailing, switchCanoeing: Enums.Activity.Canoeing, switchSightseeing: Enums.Activity.Sightseeing, switchWineTasking: Enums.Activity.Wine_Tasting]
+        let listSwitch = [switchSkiing : Enums.Activity.Skiing, switchHiking: Enums.Activity.Hiking, switchSailing: Enums.Activity.Sailing, switchCanoeing: Enums.Activity.Canoeing, switchSightseeing: Enums.Activity.Sightseeing, switchWineTasking: Enums.Activity.Wine_Tasting]
         
         for mySwitch in listSwitch {
             if mySwitch.key!.isOn {
@@ -92,7 +91,7 @@ class TripDataViewController: UIViewController  {
     
     @IBAction func sliderNumPerChanged(_ sender: Any) {
         self.numPer = Int(sliderNumPer.value)
-        lblNumPersons.text = String(self.numPer!)
+        lblNumPersons.text = String(self.numPer)
     }
     
     

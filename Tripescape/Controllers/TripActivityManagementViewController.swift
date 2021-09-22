@@ -15,6 +15,7 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater 
     
     var attractionList = [Attraction]()
     var selectedAttractions = [Attraction]()
+    var unselectedAttractions = [Attraction]() // Will be used to display the availabe attractions to add to the trip
     var destination: Enums.Location?
     
     override func viewDidLoad() {
@@ -28,6 +29,9 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater 
         getAttractionList()
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        TripService.sharedInstance.trip!.selectedAttrations = selectedAttractions
+    }
     func getAttractionList () {
         if(destination != nil &&  destination == TripService.sharedInstance.trip!.destination) {
             //If destination didnt change, then dont reload data
@@ -38,10 +42,18 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater 
         let tripDestDesc = self.destination!.description != Enums.Location.Black_Forest.description ? destination!.description : "Black Forest"
         lblSelectedActivities.text = "Select activities in \(tripDestDesc)"
         let tripSeasons = TripService.sharedInstance.getTripSeasons()
+        let desiredActivities = TripService.sharedInstance.getDesiredActivities()
         DatabaseService.sharedInstance.retrieveAttractionsForDestination(destination: self.destination!.description, seasons: tripSeasons) { attractions in
             if attractions != nil {
                 self.attractionList = attractions!
-                self.selectedAttractions = attractions! //TODO: Just select default as budget
+                for attraction in attractions! {
+                    if desiredActivities.contains(attraction.activity.description) {
+                        self.selectedAttractions.append(attraction)
+                    } else {
+                        self.unselectedAttractions.append(attraction)
+                    }
+                }
+               // print("Selected attractions: \(self.selectedAttractions.count) and unselected: \(self.unselectedAttractions.count)")
                 TripService.sharedInstance.trip!.selectedAttrations = self.selectedAttractions
                 self.updateTotalPrice()
                 self.tblView.reloadData()
@@ -54,6 +66,7 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater 
         for attraction in selectedAttractions {
             price += attraction.price
         }
+        TripService.sharedInstance.trip!.totalPrice = price
         lblTotalPrice.text = String(price) + "€"
     }
     
