@@ -75,7 +75,11 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
          let alerta = UIAlertController(title: "Save Trip", message: "Are you sure you want to save your trip and finish?", preferredStyle: .alert)
          alerta.addAction(UIAlertAction(title: "Save", style: .default, handler: { (accion) in
             alerta.dismiss(animated: true) {
+<<<<<<< HEAD
                // print("[SharedInstance trip: \(TripService.sharedInstance.trip!.dictionary)")
+=======
+                print("[SharedInstance trip: \(TripService.sharedInstance.trip!.dictionary)")
+>>>>>>> 3bed45478b489e70ada1832e699bcc22282f7425
                 DatabaseService.sharedInstance.saveTrip(for: TripService.sharedInstance.trip!) { (trip) in
                     if(trip != nil) {
                         print("Success when saving trip!")

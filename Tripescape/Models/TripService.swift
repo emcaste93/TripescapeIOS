@@ -27,7 +27,11 @@ class TripService {
             trip!.desiredActivities = desiredActivities
             trip!.numPersons = numPersons
             trip!.budget = budget
+<<<<<<< HEAD
             trip!.userId = userid
+=======
+            trip!.userid = userid
+>>>>>>> 3bed45478b489e70ada1832e699bcc22282f7425
         }
     }
     

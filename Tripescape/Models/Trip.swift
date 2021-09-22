@@ -13,12 +13,17 @@ struct Trip : Codable {
     var budget: Int = 0
     var totalPrice: Int = 0
     var id: String = NSUUID().uuidString
+<<<<<<< HEAD
     var userId: String
+=======
+    var userid: String
+>>>>>>> 3bed45478b489e70ada1832e699bcc22282f7425
     var destination: Enums.Location
     var startDate: Date
     var endDate: Date
     var desiredActivities: [String] = [String]()
     var selectedAttrations = [Attraction]()
+<<<<<<< HEAD
    /* var dictionary: [String: Any] {
         return  ["numPersons": numPersons, "budget": budget, "totalPrice": totalPrice, "selectedAttractions": selectedAttrations,
                  "startDate": startDate, "endDate": endDate, "userId": userid, "id": id]
@@ -35,13 +40,22 @@ struct Trip : Codable {
         case endDate
         case desiredActivities
         case selectedAttractions
+=======
+    var dictionary: [String: Any] {
+        return  ["numPersons": numPersons, "budget": budget, "totalPrice": totalPrice, "selectedAttractions": selectedAttrations,
+                 "startDate": startDate, "endDate": endDate, "userId": userid, "id": id]
+>>>>>>> 3bed45478b489e70ada1832e699bcc22282f7425
     }
     
     init() {
         numPersons = 0
         budget = 0
         totalPrice = 0
+<<<<<<< HEAD
         userId = ""
+=======
+        userid = ""
+>>>>>>> 3bed45478b489e70ada1832e699bcc22282f7425
         destination = .Munich
         startDate = Date()
         endDate = Date()
