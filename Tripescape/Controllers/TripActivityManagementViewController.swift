@@ -77,7 +77,7 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater,
             print("addAttractionToTrip starts")
             let vc = UIViewController()
             vc.preferredContentSize = CGSize(width: 400, height: 300)
-            let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: 400, height: 300))
+            let pickerView = UIPickerView(frame: CGRect(x: 0, y: 0, width: 300, height: 300))
             pickerView.delegate = self
             pickerView.dataSource = self
             vc.view.addSubview(pickerView)
@@ -120,6 +120,18 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater,
     func  pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
         print("PickerView selected row: \(row) with activity: \(unselectedAttractions[row].activity.description)")
         attractionToAdd = unselectedAttractions[row]
+    }
+    
+    func pickerView(_ pickerView: UIPickerView, viewForRow row: Int, forComponent component: Int, reusing view: UIView?) -> UIView {
+        var pickerLabel = view as? UILabel
+        if(pickerLabel == nil) {
+            pickerLabel = UILabel()
+            pickerLabel?.font = UIFont(name: "Montserrat", size: 16)
+            pickerLabel?.textAlignment = .center
+            let attraction = unselectedAttractions[row]
+            pickerLabel?.text = "\(attraction.activity) - \(attraction.price)€"
+        }
+        return pickerLabel!
     }
     
     //Using delegate
