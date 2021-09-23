@@ -22,7 +22,7 @@ class DatabaseService {
     private init() {}
     
     func getCurrentUserId() -> String {
-        let uid: String = Auth.auth().currentUser?.uid ?? "CvZmdFsiZAfae61gEk89G6ln1Uq2" //TODO: Hanlde FirebaseAuth Error?
+        let uid: String = Auth.auth().currentUser?.uid ?? "CvZmdFsiZAfae61gEk89G6ln1Uq2"
         print("Current userId = \(uid)")
         return uid
     }
@@ -52,22 +52,13 @@ class DatabaseService {
       }
     }
     
-    func saveTrip(for trip: Trip, onComplete: @escaping(Trip?) -> Void) {
+    func saveTrip(for trip: Trip) -> Void {
 
-       // print("[DatabaseService] (2) Trip userid =  \(trip.userId), numPersons = \(trip.numPersons)")
         do {
             try Firestore.firestore().collection("tripsGermany").document(trip.id).setData(from: trip)
         } catch let error {
             print("Error writing trip to Firestore: \(error)")
         }
-     /*   Firestore.firestore().collection("tripsGermany").addDocument(data: trip.dictionary) { error in
-            if(error != nil) {
-                print("Error while saving trip! \(String(describing: error))")
-                return
-            } else {
-                onComplete(trip)
-            }
-        }*/
     }
     
     func retrieveAttractions(desiredActivities: [String], seasons: [String], onComplete: @escaping([Attraction]?) -> Void) {
