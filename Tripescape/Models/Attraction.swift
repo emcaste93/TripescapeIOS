@@ -83,12 +83,8 @@ class Attraction: Codable {
         self.link = (dictionary["link"] as? String)!
         self.id = (dictionary["id"] as? String)!
         self.coordinates = (dictionary["coordinates"] as? GeoPoint)!
-<<<<<<< HEAD
-=======
        // let tripDaysString: Array<String> = (dictionary["tripDays"] as? Array<String>)!
         //TODO convert Array<String> to Array<Enums.TripDay>
-        //TODO: deal with coordinates
->>>>>>> 3bed45478b489e70ada1832e699bcc22282f7425
     }
     
     

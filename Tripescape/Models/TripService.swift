@@ -20,18 +20,14 @@ class TripService {
     func initTrip(startDate: Date, endDate: Date, desiredActivities: [String], numPersons: Int, budget: Int, userid: String) {
         print("TripService initTrip -")
         if(trip == nil) {
-            trip = Trip(startDate: startDate, endDate: endDate, desiredActivities: desiredActivities, budget: budget, numPersons: numPersons, userId: "")
+            trip = Trip(startDate: startDate, endDate: endDate, desiredActivities: desiredActivities, budget: budget, numPersons: numPersons, userId: userid)
         } else {
             trip!.startDate = startDate
             trip!.endDate = endDate
             trip!.desiredActivities = desiredActivities
             trip!.numPersons = numPersons
             trip!.budget = budget
-<<<<<<< HEAD
             trip!.userId = userid
-=======
-            trip!.userid = userid
->>>>>>> 3bed45478b489e70ada1832e699bcc22282f7425
         }
     }
     
