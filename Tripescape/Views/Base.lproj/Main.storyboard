@@ -153,8 +153,9 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Black Forest" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bxZ-vW-t9Q">
-                                                    <rect key="frame" x="49" y="20" width="226" height="21"/>
+                                                    <rect key="frame" x="49" y="20" width="237" height="21"/>
                                                     <constraints>
+                                                        <constraint firstAttribute="width" relation="lessThanOrEqual" constant="226" id="HiU-Hw-hWg"/>
                                                         <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="237" id="LOC-nG-0fs"/>
                                                         <constraint firstAttribute="width" constant="226" id="m0W-Bf-QNB"/>
                                                     </constraints>
@@ -172,7 +173,7 @@
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="23 October 2022" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pbh-cI-T57">
-                                                    <rect key="frame" x="105" y="130" width="104" height="22"/>
+                                                    <rect key="frame" x="105" y="130" width="223" height="22"/>
                                                     <constraints>
                                                         <constraint firstAttribute="width" constant="223" id="dt0-sK-dIa"/>
                                                     </constraints>
@@ -252,8 +253,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Munich" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-8A-JaH">
-                                <rect key="frame" x="27" y="98" width="121" height="36"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="Black Forest" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YMb-8A-JaH">
+                                <rect key="frame" x="27" y="98" width="237" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="30"/>
                                 <color key="textColor" systemColor="linkColor"/>
                                 <nil key="highlightedColor"/>
@@ -270,7 +271,7 @@
                             <constraint firstItem="J1Q-ui-AXu" firstAttribute="centerY" secondItem="TJF-xB-hK3" secondAttribute="centerY" id="F7F-aB-BIv"/>
                             <constraint firstItem="6Lq-y8-CWV" firstAttribute="trailing" secondItem="4SJ-gq-h3l" secondAttribute="trailing" constant="165" id="Mfa-aM-5Ot"/>
                             <constraint firstItem="6Lq-y8-CWV" firstAttribute="bottom" secondItem="J1Q-ui-AXu" secondAttribute="bottom" constant="175" id="Sze-KQ-3N7"/>
-                            <constraint firstItem="6Lq-y8-CWV" firstAttribute="trailing" secondItem="YMb-8A-JaH" secondAttribute="trailing" constant="266" id="YgD-cE-gCE"/>
+                            <constraint firstItem="6Lq-y8-CWV" firstAttribute="trailing" secondItem="YMb-8A-JaH" secondAttribute="trailing" constant="150" id="YgD-cE-gCE"/>
                             <constraint firstItem="4SJ-gq-h3l" firstAttribute="leading" secondItem="6Lq-y8-CWV" secondAttribute="leading" constant="27" id="abo-VE-iu1"/>
                             <constraint firstAttribute="trailingMargin" secondItem="J1Q-ui-AXu" secondAttribute="trailing" constant="-131" id="e5M-Ha-j77"/>
                             <constraint firstItem="J1Q-ui-AXu" firstAttribute="centerX" secondItem="TJF-xB-hK3" secondAttribute="centerX" id="ju8-n7-3hA"/>
@@ -571,8 +572,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="900€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-cb-9YC">
-                                <rect key="frame" x="186" y="718" width="53" height="24"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="10000€" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bTr-cb-9YC">
+                                <rect key="frame" x="186" y="718" width="93" height="24"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <color key="textColor" systemColor="systemGreenColor"/>
                                 <nil key="highlightedColor"/>
@@ -597,7 +598,7 @@
                             <constraint firstItem="uvz-TK-HKB" firstAttribute="trailing" secondItem="9bK-pi-5Bh" secondAttribute="trailing" constant="36" id="q6P-Rk-Dca"/>
                             <constraint firstItem="bTr-cb-9YC" firstAttribute="top" secondItem="dTj-db-hgk" secondAttribute="bottom" constant="8" symbolic="YES" id="rHW-4Q-jZd"/>
                             <constraint firstItem="dTj-db-hgk" firstAttribute="top" secondItem="alX-O7-Mhp" secondAttribute="bottom" constant="44" id="szf-CB-inY"/>
-                            <constraint firstItem="uvz-TK-HKB" firstAttribute="trailing" secondItem="bTr-cb-9YC" secondAttribute="trailing" constant="175" id="uep-eu-rca"/>
+                            <constraint firstItem="uvz-TK-HKB" firstAttribute="trailing" secondItem="bTr-cb-9YC" secondAttribute="trailing" id="uep-eu-rca"/>
                             <constraint firstItem="uvz-TK-HKB" firstAttribute="trailing" secondItem="Yvt-hX-aPL" secondAttribute="trailing" constant="105" id="unL-6R-e5x"/>
                             <constraint firstItem="Yvt-hX-aPL" firstAttribute="top" secondItem="COm-rK-CsO" secondAttribute="bottom" constant="22" id="y1K-oQ-upa"/>
                         </constraints>

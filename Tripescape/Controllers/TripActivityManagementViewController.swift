@@ -36,6 +36,7 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater,
     func getAttractionList () {
         if(destination != nil &&  destination == TripService.sharedInstance.trip!.destination) {
             //If destination didnt change, then dont reload data
+            self.updateTotalPrice()
             return
         }
         selectedAttractions.removeAll()
@@ -68,6 +69,8 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater,
         for attraction in selectedAttractions {
             price += attraction.price
         }
+        print("Number of persons:\(TripService.sharedInstance.trip!.numPersons)")
+        price *= TripService.sharedInstance.trip!.numPersons
         TripService.sharedInstance.trip!.totalPrice = price
         lblTotalPrice.text = String(price) + "€"
     }

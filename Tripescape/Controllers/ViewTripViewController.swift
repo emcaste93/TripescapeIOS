@@ -20,7 +20,7 @@ class ViewTripViewController: UIViewController {
         setupNavBar()
 
         // Do any additional setup after loading the view.
-        lblDestination.text = dest
+        lblDestination.text = dest != Enums.Location.Black_Forest.description ? dest : "Black Forest"
         lblDates.text = dates
     }
     

@@ -14,7 +14,7 @@ class MyTripsCollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var lblData: UILabel!
     
     func setupUI(with trip: Trip) {
-        lblTitle.text = trip.destination.description
+        lblTitle.text = trip.destination.description != Enums.Location.Black_Forest.description ? trip.destination.description : "Black Forest"
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "d MMM yy"
         lblData.text = dateFormatter.string(from: trip.startDate)

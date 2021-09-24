@@ -92,6 +92,7 @@ class TripDataViewController: UIViewController  {
     @IBAction func sliderNumPerChanged(_ sender: Any) {
         self.numPer = Int(sliderNumPer.value)
         lblNumPersons.text = String(self.numPer)
+        TripService.sharedInstance.trip!.numPersons = self.numPer
     }
     
     
