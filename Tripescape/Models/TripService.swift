@@ -32,14 +32,9 @@ class TripService {
     }
     
     func removeSelectedAttraction (attraction: Attraction) {
-        print("trip selectedAttractions count = \(trip!.selectedAttrations.count)")
         trip!.selectedAttrations.removeAll { (tripAttraction) -> Bool in
             return tripAttraction.id == attraction.id
         }
-    /*    attraction = trip!.selectedAttrations.firstIndex(where: { (tripAttraction) -> Bool in
-            return attraction.id = tripAttraction.id
-        })*/
-        //TODO: REmove Attraction
     }
     
     func getDesiredActivities () -> [String] {

@@ -87,7 +87,7 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater,
             let addAttractionAlert = UIAlertController(title: "Choose attraction", message: "", preferredStyle: .alert)
             addAttractionAlert.setValue(vc, forKey: "contentViewController")
             addAttractionAlert.addAction(UIAlertAction(title: "Add", style: .default, handler: { (accion) in
-                print("Adding attraction with activity: \(self.attractionToAdd!.activity.description) and deleting attraction: \(pickerView.selectedRow(inComponent: 0))")
+               /* print("Adding attraction with activity: \(self.attractionToAdd!.activity.description) and deleting attraction: \(pickerView.selectedRow(inComponent: 0))")*/
                 if(self.attractionToAdd == nil) {
                     self.attractionToAdd = self.unselectedAttractions[0]
                 }
@@ -95,6 +95,7 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater,
                 self.unselectedAttractions.remove(at: pickerView.selectedRow(inComponent: 0))
                 self.attractionToAdd = self.unselectedAttractions.count > 0 ? self.unselectedAttractions[0] : nil
                 self.tblView.reloadData()
+                self.updateTotalPrice()
                 addAttractionAlert.dismiss(animated: true, completion: nil)
             }))
             addAttractionAlert.addAction(UIAlertAction(title: "Cancel", style: .cancel, handler: nil))
@@ -144,6 +145,7 @@ class TripActivityManagementViewController: UIViewController, CustomCellUpdater,
         selectedAttractions = TripService.sharedInstance.trip!.selectedAttrations
         unselectedAttractions.append(attraction)
         self.tblView.reloadData()
+        updateTotalPrice()
     }
     
 

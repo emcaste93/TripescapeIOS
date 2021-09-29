@@ -28,9 +28,8 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
     }
     
     private func setPins() {
+        map.removeAnnotations(map.annotations)
         attractions = TripService.sharedInstance.trip!.selectedAttrations
-        if destination == nil || attractions.count == 0 || attractions[0].location != destination! {
-            map.removeAnnotations(map.annotations)
             if(attractions.count > 0) {
                 destination = attractions[0].location
                 let coordinate =  CLLocationCoordinate2D(latitude: attractions[0].coordinates.latitude, longitude: attractions[0].coordinates.longitude)
@@ -38,13 +37,15 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
                 for attraction in attractions {
                     addCustomPin(attraction: attraction)
                 }
+                map.reloadInputViews()
             }
-        }
     }
     
     private func addCustomPin(attraction: Attraction) {
         let pin = TripAnnotation(attraction: attraction)
-        map.addAnnotation(pin)
+        DispatchQueue.main.async {
+            self.map.addAnnotation(pin)
+        }
     }
     
     func mapView(_ mapView: MKMapView, viewFor annotation: MKAnnotation) -> MKAnnotationView? {
@@ -53,8 +54,6 @@ class TripMapViewController: UIViewController, MKMapViewDelegate {
             return nil
         }
         var annotationView = map.dequeueReusableAnnotationView(withIdentifier: "custom")
-        
-        
         
         if annotationView == nil {
             if let aV = annotation as? TripAnnotation {
